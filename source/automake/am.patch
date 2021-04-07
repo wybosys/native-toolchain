@@ -1,0 +1,11 @@
+--- Makefile	2021-04-07 09:47:42.466605011 +0000
++++ Makefile	2021-04-07 09:47:54.026522790 +0000
+@@ -3704,7 +3704,7 @@ doc/aclocal.1 doc/automake.1:
+ doc/aclocal-$(APIVERSION).1: $(aclocal_script) lib/Automake/Config.pm
+ 	$(update_mans) aclocal-$(APIVERSION)
+ doc/automake-$(APIVERSION).1: $(automake_script) lib/Automake/Config.pm
+-	$(update_mans) automake-$(APIVERSION)
++	$(update_mans) automake-$(APIVERSION) --no-discard-stderr
+ 
+ # We depend on configure.ac so that we regenerate the tarball
+ # whenever the Automake version changes.
