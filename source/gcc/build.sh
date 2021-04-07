@@ -81,6 +81,10 @@ if [ ! -f $SOURCE_DIR/check/$PACKAGE_STRING ]; then
   fi
 
   cd ..
+  cd gcc-${GCC_VERSION}
+  patch -p1 < ../manual_patches_gcc-${GCC_VERSION}/gcc.patch
+  
+  cd ..
   mkdir -p build-${GCC_VERSION}
   cd build-${GCC_VERSION}
 
